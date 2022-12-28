@@ -30,6 +30,11 @@ Font Roboto Weight 400
     --irish-color:rgba(77, 90, 229, 1);/* var(--irish-color) */
 }
 
+:hover,:focus{
+    transition-duration:250ms;
+    transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 body{
     color: var(--primary-text-color);
     background-color:var(--accent-color);
