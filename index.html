@@ -48,9 +48,23 @@
             <section class="hero">
                 <div class="conteiner ">
                 <h1 class="hero-title">Effective Solutions for Your Business</h1>
-                <button class="button" type="button">Order Service</button>
+                <button data-modal-open class="button" type="button">Order Service</button>
                 </div>
             </section>
+
+            <!-- modal -->
+            <div data-modal class="backdrop is-hidden">
+                <div class="modal">
+
+                    <button data-modal-close class="modal-buttonX button"  type="button">
+                        <svg width="8" height="8">
+                            <use href="./images/icons.svg#icon-x">
+                            </use>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
         <!-- список 4 блока -->
         <section class="section fore">
             <div class="conteiner">
