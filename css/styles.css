@@ -30,10 +30,10 @@ Font Roboto Weight 400
     --irish-color:rgba(77, 90, 229, 1);/* var(--irish-color) */
 }
 
-:hover,:focus{
+/* :hover,:focus{
     transition-duration:250ms;
     transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);
-}
+} */
 
 body{
     /* color: var(--primary-text-color); */
@@ -116,6 +116,9 @@ h1,h2,h3,p{
     line-height: 1.5;
     padding-top: 24px;
     padding-bottom: 24px;
+    transition-property: color ;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     /* display: block; */
 }
 
@@ -132,10 +135,10 @@ h1,h2,h3,p{
     margin-right: 0px;
 }
 
-.site-nav a:hover,
+/* .site-nav a:hover,
 .site-nav a:focus{
     color: var(--title-text-color);
-}
+} */
 
 .site-nav a.current {
     color: var(--irish-color);
@@ -184,6 +187,9 @@ h1,h2,h3,p{
     line-height: 1.5;
     padding-top: 24px;
     padding-bottom: 24px;
+    transition-property: color ;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .auth-nav{
@@ -199,7 +205,7 @@ h1,h2,h3,p{
 .auth-nav a:hover,
 .auth-nav a:focus {
     color: var(--irish-color);
-    fill: var(--irish-color);
+    /* fill: var(--irish-color); */
 }
 
 .icon-ph-ml{
@@ -291,19 +297,19 @@ h1,h2,h3,p{
     padding: 16px 32px;
     min-width: 170px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    transition-property: background-color ;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }   
 
-.hero .button:active{
-    background: #404BBF;
+/* .hero .button:active{
+    background-color: #404BBF;
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-        border-radius: 4px;
-}
+} */
 
 .hero .button:hover,
 .hero .button:focus {
-    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 
-    0px 1px 1px rgba(46, 47, 66, 0.16), 
-    0px 2px 1px rgba(46, 47, 66, 0.08);
+    background-color: #404BBF;
 }
 
 /* modal */
@@ -329,7 +335,7 @@ h1,h2,h3,p{
 }
 
 .backdrop.is-hidden .modal{
-    transform: translate(-50%, -50%) scale(2);
+    transform: translate(-50%, -50%) scale(0);
 }
 
 .modal{
@@ -341,13 +347,15 @@ h1,h2,h3,p{
     0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
 
+    visibility: visible;
     position: absolute;
     top:50%;
     left:50%;
     opacity: 1;
     transform: translate(-50%, -50%) scale(1);
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), 
-                opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition-property: opacity,transform,visible;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-buttonX{
@@ -368,6 +376,9 @@ h1,h2,h3,p{
     right: 24px;
     padding: 0px;
     fill: #000;
+    transition-property: background-color,fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     }
 
     .modal-buttonX:hover{
@@ -556,7 +567,16 @@ h1,h2,h3,p{
     margin-right: 24px;
     background-color: rgba(77, 90, 229, 1);
     border-radius: 50%;
+    transition-property: background-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+/* .seti a{
+    transition-property: background-color;
+    border-radius: 50%;
+
+} */
 
 .soc .seti:last-child {
     margin-right: 0px;
@@ -569,10 +589,10 @@ display: flex;
 align-items: center;
 justify-content: center;
 }
-.seti a:hover,.seti a:focus
+
+.seti:hover,.seti:focus
 {
     background-color: #404BBF;
-    border-radius: 50%;
 }
 
 /* Customers */
@@ -679,12 +699,7 @@ justify-content: center;
     width: 168px;
     height: 88px;
     margin-right: 24px;
-    
-}
-
-.button-icon a{
-    border: 1px solid #8E8F99;
-    border-radius: 4px;
+    transition-property: fill;
     
 }
 
@@ -697,6 +712,9 @@ justify-content: center;
 
 .button-icon-svg{
     fill: #8E8F99;
+    transition-property:  fill;
+transition-duration: 250ms;
+transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
@@ -714,7 +732,15 @@ height: 100%;
 width: 100%;
 display: flex;
 align-items: center;
-justify-content: center;}
+justify-content: center;
+border: 1px solid #8E8F99;
+border-radius: 4px;
+
+transition-property:  border;
+transition-duration: 250ms;
+transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+}
 
 
 
@@ -798,6 +824,9 @@ width: 40px;
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 50%;
     margin-right: 16px;
+    transition-property:  background-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .seti-footer:hover,
@@ -848,16 +877,22 @@ width: 40px;
     line-height: 1.5;
     padding: 12px 24px;
     border-radius: 4px;
+    border: 1px solid #E7E9FC;
+    box-shadow: none;
+    transition-property:  color, background-color, box-shadow,border ;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     }
 
 .buttons-menu:hover,
 .buttons-menu:focus {
+    border: none;
     color: var(--accent-color);
     background-color: var(--irish-color);
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1),
     0px 2px 1px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
-    border-radius: 4px;
+    /* border-radius: 4px; */
 }
 
 /* product */
@@ -872,6 +907,10 @@ width: 40px;
         margin-right: 24px;
         margin-bottom: 39px;
         border: 0.5px solid #F4F4FD;
+        box-shadow: none;
+        transition-property:  box-shadow ;
+        transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .product li:nth-child(3n) {
@@ -922,8 +961,12 @@ height: auto;
     background-color: #4D5AE5;
     transform: translateY(100%);
     opacity: 0;
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
+    visibility:hidden;
+    
+    /* transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1) ; */
+    transition-property:  transform, opacity,visibility ;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
  
 .product-li .text-thumb{
@@ -940,5 +983,6 @@ height: auto;
 .product-li:hover .product-thumb{
     transform: translateY(0%);
     opacity: 1;
-    
+    visibility: visible;
+
 }
