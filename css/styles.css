@@ -296,8 +296,8 @@ h1,h2,h3,p{
     border-radius: 4px;
     padding: 16px 32px;
     min-width: 170px;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    transition-property: background-color ;
+    box-shadow: none;
+    transition-property: background-color,box-shadow ;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }   
@@ -310,6 +310,7 @@ h1,h2,h3,p{
 .hero .button:hover,
 .hero .button:focus {
     background-color: #404BBF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
 /* modal */
